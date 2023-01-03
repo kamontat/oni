@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	
+
 	import '@unocss/reset/antfu.css';
 	// import '@unocss/reset/tailwind.css'
 
