@@ -6,6 +6,8 @@ import presetIcons from '@unocss/preset-icons'
 import presetTypography from '@unocss/preset-typography'
 import presetRemToPx from '@unocss/preset-rem-to-px'
 
+import transformerDirectives from '@unocss/transformer-directives'
+
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
@@ -14,11 +16,13 @@ const config = {
 			presets: [
 				presetUno(),
 				presetIcons({
-					prefix: "i-",
-					cdn: 'https://esm.sh/'
+					prefix: "i-"
 				}),
 				presetTypography(),
 				presetRemToPx(),
+			],
+			transformers: [
+				transformerDirectives(),
 			],
 			safelist: [
 				...["up", "down"].map(k => `i-ic-baseline-keyboard-arrow-${k}`),
